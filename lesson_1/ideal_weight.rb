@@ -8,6 +8,6 @@ height = gets.to_i
 weight = height - 100
 if weight >= 0
   puts "Dear #{name}, your ideal weight is #{weight}kg."
-else weight < 0
+else
   puts "Dear #{name}, your weight is already optimal!"
- end
+end
