@@ -1,14 +1,27 @@
-print "State the length of the hypotenuese (the longest side)."
-c = gets.to_i
+print "State the length of the 1st side of the triangle."
+a = gets.to_f
 print "State the length of the 2nd side of the triangle."
-a = gets.to_i
+b = gets.to_f
 print "State the length of the remaining side."
-b = gets.to_i
+c = gets.to_f
 
-if c**2 == a**2 + b**2 && a == b
-  puts "The triangle is right angled and isosceles!"
-elsif c**2 == a**2 + b**2
+if a > b && a > c
+  hypotenuse = a
+  length_1 = b
+  length_2 = c
+elsif b > a && b > c
+  hypotenuse = b
+  length_1 = a
+  length_2 = c
+elsif hypotenuse = c
+  length_1 = a
+  length_2 = b
+
+if hypotenuse**2 == length_1**2 + length_2**2 && length_1 == length_2
+    puts "The triangle is right angled and isosceles!"
+elsif hypotenuse**2 == length_1**2 + length_2**2
   puts "The triangle is right angled!"
-elsif a == b && b == c
+elsif hypotenuse == length_1 && length_1 == length_2
   puts "The triangle is not right angled but equilateral."
+end
 end
