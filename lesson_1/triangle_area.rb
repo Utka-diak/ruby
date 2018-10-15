@@ -1,8 +1,8 @@
 print "State the length of the base of the triangle."
-a = gets.chomp
+base = gets.to_i
 
 print "State the height of the triangle."
-h = gets.chomp
+height = gets.to_i
 
-area = ( 1 / 2.0 ) * a.to_i * h.to_i 
+area = 0.5 * base * height
 puts "The area of the triangle is #{area}."
