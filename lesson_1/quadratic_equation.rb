@@ -10,9 +10,10 @@ d = b**2 - 4 * a * c
 if d < 0
   puts "discriminant = #{d}."
 elsif d > 0
-  x1 = ( - b + Math.sqrt(d) ) / ( 2 * a )
-  x2 = ( - b - Math.sqrt(d) ) / ( 2 * a )
+  sqrt_d = Math.sqrt(d)
+  x1 = (- b + sqrt_d) / (2 * a)
+  x2 = (- b - sqrt_d) / (2 * a)
   puts "discriminant = #{d}, x = #{x1},#{x2}"
-elsif
+else
   puts "discriminant = #{d}, x = #{x1}"
 end
