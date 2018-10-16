@@ -7,14 +7,14 @@ c = gets.to_f
 
 sides = [a, b, c]
 sides.sort!
-condition_1 = sides[2]**2 == sides[0]**2 + sides[1]**2
-condition_2 = sides[0] == sides [1]
-condition_3 = a == b && b == c
+right_angled_tr = sides[2]**2 == sides[0]**2 + sides[1]**2
+isosceles_tr = sides[0] == sides [1]
+equilateral_tr = a == b && b == c
 
-if condition_1 && condition_2
+if right_angled_tr && isosceles_tr
   puts "The triangle is right angled and isosceles!"
-elsif condition_1
+elsif right_angled_tr
   puts "The triangle is right angled!"
-elsif condition_3
+elsif equilateral_tr
   puts "The triangle is not right angled but equilateral."
 end
