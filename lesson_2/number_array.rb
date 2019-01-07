@@ -1,5 +1,2 @@
-numbers = [10]
-while numbers[-1] < 100
-  numbers.push(numbers[-1] + 5)
-end
+numbers = (10..100).step(5).to_a
 puts numbers
